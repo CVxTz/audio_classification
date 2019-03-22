@@ -130,7 +130,7 @@ file_to_int = {k:label_to_int[v] for k,v in file_to_label.items()}
 def get_model_mel():
 
     nclass = len(list_labels)
-    inp = Input(shape=(63, 320, 1))
+    inp = Input(shape=(157, 320, 1))
     norm_inp = BatchNormalization()(inp)
     img_1 = Convolution2D(16, kernel_size=(3, 7), activation=activations.relu)(norm_inp)
     img_1 = Convolution2D(16, kernel_size=(3, 7), activation=activations.relu)(img_1)
